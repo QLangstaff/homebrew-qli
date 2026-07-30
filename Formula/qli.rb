@@ -1,25 +1,25 @@
 class Qli < Formula
   desc "Polyglot code-analysis CLI and any-language extension framework."
   homepage "https://github.com/QLangstaff/qli"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/QLangstaff/qli/releases/download/v0.1.1/qli-aarch64-apple-darwin.tar.xz"
-      sha256 "2b18b8d2ced3d8dc706a528fd2729359be10a5f8f4c62f6679168185f1ea30ed"
+      url "https://github.com/QLangstaff/qli/releases/download/v0.1.2/qli-aarch64-apple-darwin.tar.xz"
+      sha256 "19a554b45252c9570689bd014f27ec96d9e937baf5d4841050e2b18627caad9c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/QLangstaff/qli/releases/download/v0.1.1/qli-x86_64-apple-darwin.tar.xz"
-      sha256 "d85c20342b604998fe75aa1d4715e1d8141ee14f304f9f9342522f929c96bf0a"
+      url "https://github.com/QLangstaff/qli/releases/download/v0.1.2/qli-x86_64-apple-darwin.tar.xz"
+      sha256 "39010adfb188d2b86fc24caebc4e08d1348962f7080843d1cca7675d20aab2ff"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/QLangstaff/qli/releases/download/v0.1.1/qli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ff14c39c8d73ae5d464c6439819e0a61e7f2d5fafdb54505a66bdc8fcbde62cb"
+      url "https://github.com/QLangstaff/qli/releases/download/v0.1.2/qli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "56b74ea89ee65f196e41d4c71f5ed2afa5ffdff42f83765a3885a97cf784b8e9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/QLangstaff/qli/releases/download/v0.1.1/qli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "2af87be4978bd58d4f1fdc317c88e905fafe7f2b9ab26d9bc9f6bf3088b6ef84"
+      url "https://github.com/QLangstaff/qli/releases/download/v0.1.2/qli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8a01c182956ab25524d7a9ab136e8eae70e5db29d96a02240963f460a220ac47"
     end
   end
   license "MIT"
