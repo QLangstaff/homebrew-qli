@@ -1,25 +1,25 @@
 class Qli < Formula
   desc "Polyglot code-analysis CLI and any-language extension framework."
   homepage "https://github.com/QLangstaff/qli"
-  version "0.1.2"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/QLangstaff/qli/releases/download/v0.1.2/qli-aarch64-apple-darwin.tar.xz"
-      sha256 "19a554b45252c9570689bd014f27ec96d9e937baf5d4841050e2b18627caad9c"
+      url "https://github.com/QLangstaff/qli/releases/download/v0.2.0/qli-aarch64-apple-darwin.tar.xz"
+      sha256 "a0ccc8936680a346f808a9355e2a8ac130f8e96923837a336de8141e2d0d6dc7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/QLangstaff/qli/releases/download/v0.1.2/qli-x86_64-apple-darwin.tar.xz"
-      sha256 "39010adfb188d2b86fc24caebc4e08d1348962f7080843d1cca7675d20aab2ff"
+      url "https://github.com/QLangstaff/qli/releases/download/v0.2.0/qli-x86_64-apple-darwin.tar.xz"
+      sha256 "9aa434c2128d581fd5d87f17eb3254a8d80740e1ad52f4cce00dc4438ff94bdf"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/QLangstaff/qli/releases/download/v0.1.2/qli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "56b74ea89ee65f196e41d4c71f5ed2afa5ffdff42f83765a3885a97cf784b8e9"
+      url "https://github.com/QLangstaff/qli/releases/download/v0.2.0/qli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7855fed53ab2eeab47d45fe5872a99ddf62d3e9ff8c837befb1b74179de19939"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/QLangstaff/qli/releases/download/v0.1.2/qli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8a01c182956ab25524d7a9ab136e8eae70e5db29d96a02240963f460a220ac47"
+      url "https://github.com/QLangstaff/qli/releases/download/v0.2.0/qli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "60724b61b79bd1db3feca9e15e3b0a4ec2eaeac195f920d514caf78faec6a543"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Qli < Formula
   end
 
   def install
-    bin.install "qli" if OS.mac? && Hardware::CPU.arm?
-    bin.install "qli" if OS.mac? && Hardware::CPU.intel?
-    bin.install "qli" if OS.linux? && Hardware::CPU.arm?
-    bin.install "qli" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "qli"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "qli"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "qli"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "qli"
+    end
 
     install_binary_aliases!
 
